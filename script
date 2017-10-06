@@ -1,0 +1,195 @@
+#! /bin/bash
+echo "--------------------------------------------------------";
+echo "------------------Baguette-magique.com------------------";
+echo "--------------------------------------------------------";
+
+#déclarer les variables
+univers="";
+ecoleDeMagie="";
+pouvoir="";
+style="";
+couleur="";
+
+#Question 1 univers
+echo "Choisissez l'univers de votre baguette magique.";
+
+#Select univers
+select response in "Disney" "Donjons et Dragons" "Harry Potter" "La brioche dorée"; do
+	case $response in
+    "Disney" ) univers="Disney"; break;;
+    "Donjons et Dragons" ) univers="Donjons et Dragons"; break;;
+    "Harry Potter" ) univers="Harry Potter"; break;;
+    "La brioche dorée" ) echo "La brioche dorée"; exit 0;;
+	esac
+done
+
+#Univers de Donjons et Dragons
+if [ "$univers" == "Donjons et Dragons" ]
+then
+  echo "Choisissez une école de magie.";
+	select response in "Abjuration" "Divination" "Enchantement" "Évocation" "Illusion" "Invocation" "Nécromancie" "Transmutation"; do
+		case $response in
+	    "Abjuration" ) ecoleDeMagie="Abjuration"; break;;
+			"Divination" ) ecoleDeMagie="Divination"; break;;
+			"Enchantement" ) ecoleDeMagie="Enchantement"; break;;
+			"Évocation" ) ecoleDeMagie="Évocation"; break;;
+			"Illusion" ) ecoleDeMagie="Illusion"; break;;
+			"Invocation" ) ecoleDeMagie="Invocation"; break;;
+			"Nécromancie" ) ecoleDeMagie="Nécromancie"; break;;
+	    "Transmutation" ) ecoleDeMagie="Transmutation"; break;;
+		esac
+	done
+	#Univers Harry Potter
+elif [ "$univers" == "Harry Potter" ]
+then
+	echo "Choisissez votre école de magie.";
+	select response in "Castelobruxo" "Koldovstoretz" "Beauxbâtons" "Mahoutokoro" "Durmstrang" "Uagadou" "Ilvermorny" "Poudlard"; do
+		case $response in
+	    "Castelobruxo" ) ecoleDeMagie="Castelobruxo"; break;;
+			"Koldovstoretz" ) ecoleDeMagie="Koldovstoretz"; break;;
+			"Beauxbâtons" ) ecoleDeMagie="Beauxbâtons"; break;;
+			"Mahoutokoro" ) ecoleDeMagie="Mahoutokoro"; break;;
+			"Durmstrang" ) ecoleDeMagie="Durmstrang"; break;;
+			"Uagadou" ) ecoleDeMagie="Uagadou"; break;;
+			"Ilvermorny" ) ecoleDeMagie="Ilvermorny"; break;;
+	    "Poudlard" ) ecoleDeMagie="Poudlard"; break;;
+		esac
+	done
+		#Univers Disney
+elif [ "$univers" == "Disney" ]
+then
+	echo "Choisissez votre mentor.";
+	select response in "L'apprenti sorcier" "La marraine la bonne fée" "Merlin l'enchanteur" "Jafar"; do
+		case $response in
+			"L'apprenti sorcier" ) ecoleDeMagie="L'apprenti sorcier"; break;;
+			"La marraine la bonne fée" ) ecoleDeMagie="La marraine la bonne fée"; break;;
+			"Merlin l'enchanteur" ) ecoleDeMagie="Merlin l'enchanteur"; break;;
+			"Jafar" ) ecoleDeMagie="Jafar"; break;;
+		esac
+	done
+	#Univers brioche dorée
+elif [ "$univers" == "Brioche dorée" ]
+then
+echo "Choisissez votre produit.";
+select response in "Baguette tradition magique" "Baguette 3 céréales magique" "Demi-baguette magique" "Pain de campagne magique"; do
+	case $response in
+		"Baguette tradition magique" ) ecoleDeMagie="Baguette tradition magique"; break;;
+		"Baguette 3 céréales magique" ) ecoleDeMagie="Baguette 3 céréales magique"; break;;
+		"Demi-baguette magique" ) ecoleDeMagie="Demi-baguette magique"; break;;
+		"Pain de campagne magique" ) ecoleDeMagie="Pain de campagne magique"; break;;
+	esac
+done
+fi
+
+#pouvoir
+if [ "$ecoleDeMagie" == "Abjuration" ]
+then
+  echo "Choisissez un pouvoir.";
+	if [ "$ecoleDeMagie" == "Donjons et Dragons" ]
+	then
+	  echo "Choisissez un pouvoir.";
+		select response in "Flèche acide de Melf" "Boule de feu" "Transmutation de "; do
+			case $response in
+		    "Abjuration" ) ecoleDeMagie="Abjuration"; break;;
+			esac
+		done
+	fi
+fi
+#! /bin/bash
+echo "--------------------------------------------------------";
+echo "------------------Baguette-magique.com------------------";
+echo "--------------------------------------------------------";
+
+#déclarer les variables
+univers="";
+ecoleDeMagie="";
+pouvoir="";
+style="";
+couleur="";
+
+#Question 1 univers
+echo "Choisissez l'univers de votre baguette magique.";
+
+#Select univers
+select response in "Disney" "Donjons et Dragons" "Harry Potter" "La brioche dorée"; do
+	case $response in
+    "Disney" ) univers="Disney"; break;;
+    "Donjons et Dragons" ) univers="Donjons et Dragons"; break;;
+    "Harry Potter" ) univers="Harry Potter"; break;;
+    "La brioche dorée" ) echo "La brioche dorée"; exit 0;;
+	esac
+done
+
+#Univers de Donjons et Dragons
+if [ "$univers" == "Donjons et Dragons" ]
+then
+  echo "Choisissez une école de magie.";
+	select response in "Abjuration" "Divination" "Enchantement" "Évocation" "Illusion" "Invocation" "Nécromancie" "Transmutation"; do
+		case $response in
+	    "Abjuration" ) ecoleDeMagie="Abjuration"; break;;
+			"Divination" ) ecoleDeMagie="Divination"; break;;
+			"Enchantement" ) ecoleDeMagie="Enchantement"; break;;
+			"Évocation" ) ecoleDeMagie="Évocation"; break;;
+			"Illusion" ) ecoleDeMagie="Illusion"; break;;
+			"Invocation" ) ecoleDeMagie="Invocation"; break;;
+			"Nécromancie" ) ecoleDeMagie="Nécromancie"; break;;
+	    "Transmutation" ) ecoleDeMagie="Transmutation"; break;;
+		esac
+	done
+	#Univers Harry Potter
+elif [ "$univers" == "Harry Potter" ]
+then
+	echo "Choisissez votre école de magie.";
+	select response in "Castelobruxo" "Koldovstoretz" "Beauxbâtons" "Mahoutokoro" "Durmstrang" "Uagadou" "Ilvermorny" "Poudlard"; do
+		case $response in
+	    "Castelobruxo" ) ecoleDeMagie="Castelobruxo"; break;;
+			"Koldovstoretz" ) ecoleDeMagie="Koldovstoretz"; break;;
+			"Beauxbâtons" ) ecoleDeMagie="Beauxbâtons"; break;;
+			"Mahoutokoro" ) ecoleDeMagie="Mahoutokoro"; break;;
+			"Durmstrang" ) ecoleDeMagie="Durmstrang"; break;;
+			"Uagadou" ) ecoleDeMagie="Uagadou"; break;;
+			"Ilvermorny" ) ecoleDeMagie="Ilvermorny"; break;;
+	    "Poudlard" ) ecoleDeMagie="Poudlard"; break;;
+		esac
+	done
+		#Univers Disney
+elif [ "$univers" == "Disney" ]
+then
+	echo "Choisissez votre mentor.";
+	select response in "L'apprenti sorcier" "La marraine la bonne fée" "Merlin l'enchanteur" "Jafar"; do
+		case $response in
+			"L'apprenti sorcier" ) ecoleDeMagie="L'apprenti sorcier"; break;;
+			"La marraine la bonne fée" ) ecoleDeMagie="La marraine la bonne fée"; break;;
+			"Merlin l'enchanteur" ) ecoleDeMagie="Merlin l'enchanteur"; break;;
+			"Jafar" ) ecoleDeMagie="Jafar"; break;;
+		esac
+	done
+	#Univers brioche dorée
+elif [ "$univers" == "Brioche dorée" ]
+then
+echo "Choisissez votre produit.";
+select response in "Baguette tradition magique" "Baguette 3 céréales magique" "Demi-baguette magique" "Pain de campagne magique"; do
+	case $response in
+		"Baguette tradition magique" ) ecoleDeMagie="Baguette tradition magique"; break;;
+		"Baguette 3 céréales magique" ) ecoleDeMagie="Baguette 3 céréales magique"; break;;
+		"Demi-baguette magique" ) ecoleDeMagie="Demi-baguette magique"; break;;
+		"Pain de campagne magique" ) ecoleDeMagie="Pain de campagne magique"; break;;
+	esac
+done
+fi
+
+#pouvoir
+if [ "$ecoleDeMagie" == "Abjuration" ]
+then
+  echo "Choisissez un pouvoir.";
+	if [ "$ecoleDeMagie" == "Donjons et Dragons" ]
+	then
+	  echo "Choisissez un pouvoir.";
+		select response in "Flèche acide de Melf" "Boule de feu" "Transmutation de "; do
+			case $response in
+		    "Abjuration" ) ecoleDeMagie="Abjuration"; break;;
+			esac
+		done
+	fi
+fi
+
